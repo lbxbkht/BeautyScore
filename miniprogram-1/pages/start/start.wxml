@@ -1,0 +1,7 @@
+<!--首页-->
+<view mode="aspectFill">
+<cover-image src='/icon/beautyscore.png' style="display: block;"></cover-image>
+<view>
+  <button type="#CDB7C4" class="reChoose" bindtap="toCamera">start your beauty</button>
+</view>
+</view>

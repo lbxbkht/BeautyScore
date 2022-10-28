@@ -1,0 +1,9 @@
+.reChoose{
+  position: fixed;
+  bottom:80px;
+  left:50%;
+  transform: translateX(-50%);
+  box-shadow: 0px 1px 5px #666;
+  color: #CDB7C4 ;
+  opacity: 1;
+}

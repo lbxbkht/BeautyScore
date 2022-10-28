@@ -1,0 +1,39 @@
+<!--
+<cover-view mode="aspectFill">
+<cover-image src='/icon/beautyscore.png' style="display: block;"></cover-image>
+<view>
+  <button type="warn" class="reChoose" bindtap="toCamera">start your beatuty</button>
+</view>
+</cover-view>
+-->
+
+<camera style="height: {{wh}}px; width: 100%;" flash="off" device-position='{{position}}' wx:if="{{isShowPic === false}}">
+<cover-view class='btn-box'>
+<!--切换摄像头-->
+<cover-image src='/icon/切换.png/' bindtap="reverseCamera"></cover-image>
+<!--拍照-->
+<cover-image src='/icon/相机icon.png' bindtap="takePhoto"></cover-image>
+<!--从相册选取照片-->
+<cover-image src='/icon/相册icon.png' bindtap="choosePhoto"></cover-image>
+</cover-view>
+</camera>
+
+<!--从相册选取图片展示的界面-->
+<view wx:else>
+<image src='{{src}}' style="width: 100%; height: {{wh}}px; display: block;" mode="aspectFill"></image>
+<view class='faceinfo_box'>
+<view class='face_row'>
+<text>年龄:{{faceInfo.age}}岁</text>
+<text>性别:{{map.gender[faceInfo.gender.type]}}</text>
+</view>
+<view class='face_row'>
+<text>颜值:{{faceInfo.beauty}}分</text>
+<text>表情:{{map.expression[faceInfo.expression.type]}}</text>
+</view>
+<view class='face_row'>
+<text>眼镜:{{map.glasses[faceInfo.glasses.type]}}</text>
+<text>情绪:{{map.emotion[faceInfo.emotion.type]}}</text>
+</view>
+</view>
+<button type="warn" class="reChoose" bindtap="reChoose">重新选择照片</button>
+</view>
